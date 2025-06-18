@@ -1,4 +1,7 @@
 import { IconArrowrightShort } from "../Components/Icons/IconArrowRightShort";
+import Pizza3 from "../assets/Images/Pizza3.png"
+import image from "../assets/Images/cook.png"
+import { IconPatchedChecked } from "../Components/Icons/IconPatchedCheck";
 
 function Home(){
     return(
@@ -25,7 +28,67 @@ function Home(){
 
                     </div>
 
+                    <div className="ml-20">
+                        <img 
+                        src={Pizza3}
+                        alt="PizzaImage"
+                        className="w-72 h-72 object-cover rounded-full mx-auto"
+                        />
+                    </div>
             </section>
+
+        {/*services section*/}
+
+        <section 
+            className="py-4 mt-6 bg-gradient-to-r from-amber-50 to-orange-300">
+                <div className="container flex flex-col md:flex-row">
+                    <div className="flex flex-col items-center justify-center rounded-lg lg:w-1/2">
+                    <img 
+                    src={image} 
+                    alt="CookImage"
+                    width={300}
+                    className=" rounded-lg "
+                    />
+                    </div>
+
+                    <div className="flex flex-col flex-wrap text-center lg:py-6 lg:w-1/2 lg:pl-12 lg:text-left">
+                        <div className="flex flex-col items-start lg:items-start">
+                        <div>
+                            <h2 className="mb-2 text-5xl font-extrabold text-transparent title-font bg-gradient-to-r from-orange-600 to-orange-300 bg-clip-text">
+                                Cooked by the best <br /> chefs in the world.
+                            </h2>
+                            <p className="text-base leading-relaxed text-[#6B7280]">
+                                There are many benefits regarding to that but the main ones are:
+                            </p>
+                        </div>
+                    </div>
+
+                    <div className="w-full p-1">
+                        <div className="flex items-center h-full p-2 text-2xl rounded">
+                            <IconPatchedChecked className="text-[#f38339] w-10 h-10 mr-4"/>
+                            <span className="font-bold title-font">Perfect Taste</span>
+                        </div>
+                    </div>
+
+                    <div className="w-full p-1">
+                        <div className="flex items-center h-full p-2 text-2xl rounded">
+                            <IconPatchedChecked className="text-[#f38339] w-10 h-10 mr-4"/>
+                            <span className="font-bold title-font">Prepared Quickly</span>
+                        </div>
+                    </div>
+
+                    <div className="w-full p-1">
+                        <div className="flex items-center h-full p-2 text-2xl rounded">
+                            <IconPatchedChecked className="text-[#f38339] w-10 h-10 mr-4"/>
+                            <span className="font-bold title-font">Food Hygiene Guaranteed</span>
+                        </div>
+                    </div>
+
+                    </div>
+
+                </div>
+            
+        </section>
 
         </div>
     );
