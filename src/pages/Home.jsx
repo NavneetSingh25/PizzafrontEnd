@@ -2,6 +2,9 @@ import { IconArrowrightShort } from "../Components/Icons/IconArrowRightShort";
 import Pizza3 from "../assets/Images/Pizza3.png"
 import image from "../assets/Images/cook.png"
 import { IconPatchedChecked } from "../Components/Icons/IconPatchedCheck";
+import Food from "../assets/Images/food.png"
+import pickup from "../assets/Images/pickup.png"
+import enjoy from "../assets/Images/enjoy.png"
 
 function Home(){
     return(
@@ -46,7 +49,7 @@ function Home(){
                     <img 
                     src={image} 
                     alt="CookImage"
-                    width={300}
+                    width={500}
                     className=" rounded-lg "
                     />
                     </div>
@@ -84,12 +87,92 @@ function Home(){
                         </div>
                     </div>
 
+                    <div className="px-5 py-4 mx-auto">
+                        <div className="flex justify-center py-4">
+                            <div className="inline-flex w-16 h-1 bg-yellow-500 rounded-full"></div>
+                        </div>
+                        <div className="flex flex-wrap space-y-6 md:space-y-0">
+                            <div className="flex flex-col items-center text-center p-4 md:w-1/3">
+                            <div className="inline-flex items-center justify-center flex-shrink-0 w-20 h-20 mb-5 bg-yellow-100 rounded-full">
+                                <img src={Food} alt="order food" />
+                            </div>
+                            <div className="flex-grow">
+                                <h2 className="mb-3 text-lg font-bold text-gray-900 title-font">
+                                    Order Food 
+                                </h2>
+                                <p className="text-base leading-relaxed">
+                                    As easy as 1,2,3.just select your pizza and dplace order.
+                                </p>
+                            </div>
+                            </div>
+                            <div className="flex flex-col items-center text-center p-4 md:w-1/3">
+                            <div className="inline-flex items-center justify-center flex-shrink-0 w-20 h-20 mb-5 bg-yellow-100 rounded-full">
+                                <img src={pickup} alt="order food" />
+                            </div>
+                            <div className="flex-grow">
+                                <h2 className="mb-3 text-lg font-bold text-gray-900 title-font">
+                                    Pickup Food
+                                </h2>
+                                <p className="text-base leading-relaxed">
+                                    Pick up your order from the nearest store or get it delivered to your doorsteps.
+                                </p>
+                            </div>
+                            </div>
+                            <div className="flex flex-col items-center text-center p-4 md:w-1/3">
+                            <div className="inline-flex items-center justify-center flex-shrink-0 w-20 h-20 mb-5 bg-yellow-100 rounded-full">
+                                <img src={enjoy} alt="order food" />
+                            </div>
+                            <div className="flex-grow">
+                                <h2 className="mb-3 text-lg font-bold text-gray-900 title-font">
+                                  Enjoy Food  
+                                </h2>
+                                <p className="text-base leading-relaxed">
+                                    As soon as you get your food,enjoy it with your loved ones.
+                                </p>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+
                     </div>
 
                 </div>
             
         </section>
 
+        <section className="py-10 px-6 bg-gradient-to-r from-orange-50 to-orange-300">
+        <div className="container mx-auto flex flex-col-reverse md:flex-row items-center gap-10">
+
+            {/* Google Maps Embed */}
+            <div className="w-full md:w-1/2 h-[300px]">
+            <iframe
+                title="Our Location"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3648.7104792713484!2d85.3750614153627!3d23.994242184482885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f4202fd7b5182b%3A0x28b55c36413b9f1!2sHazaribag%2C%20Jharkhand%20825101!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                width="100%"
+                height="100%"
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="rounded-lg shadow-md"
+            ></iframe>
+            </div>
+
+            {/* Description */}
+            <div className="md:w-1/2 text-center md:text-left">
+            <h2 className="text-4xl font-bold text-transparent bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text mb-4">
+                Find us in the heart of Hazaribag
+            </h2>
+            <p className="text-[#475569] mb-3">
+                Located in the bustling city center, our outlet delivers piping hot pizzas right from the oven to your doorstep.
+                Whether you dine in or order online, you’re always within reach of great taste.
+            </p>
+            <p className="text-[#475569]">
+                Open daily from <span className="font-semibold text-orange-600">10 AM to 11 PM</span> — come drop by or just fire up the app and we’ll come to you!
+            </p>
+            </div>
+
+        </div>
+        </section>
         </div>
     );
 }
