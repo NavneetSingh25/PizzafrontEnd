@@ -5,9 +5,11 @@ import { IconPatchedChecked } from "../Components/Icons/IconPatchedCheck";
 import Food from "../assets/Images/food.png"
 import pickup from "../assets/Images/pickup.png"
 import enjoy from "../assets/Images/enjoy.png"
+import Layout from'../Layouts/Layout'
 
 function Home(){
     return(
+        <Layout>
         <div>
             {/*hero section*/}
             <section 
@@ -174,6 +176,7 @@ function Home(){
         </div>
         </section>
         </div>
+        </Layout>
     );
 }
 
