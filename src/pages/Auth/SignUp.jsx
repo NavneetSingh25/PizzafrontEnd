@@ -1,8 +1,14 @@
 import { useState } from 'react';
 import toast from 'react-hot-toast';
 import SignUpPresentation from './SignUpPresentation';
+import { useDispatch } from 'react-redux';
+import { createAccount } from '../../Redux/Slices/AuthSlice';
+import { useNavigate } from 'react-router-dom';
 
 function Signup(){
+
+    const dispatch=useDispatch();
+    const navigate=useNavigate();
 
     const [SignUpState,setSignUpState]=useState({
         firstName:'',
@@ -19,7 +25,7 @@ function Signup(){
         })
     }
 
-    function handleFormSubmit(e){
+    async function handleFormSubmit(e){
         e.preventDefault();
         console.log(SignUpState)
 
@@ -43,6 +49,11 @@ function Signup(){
             return;
         }
 
+        const apiResponse=await dispatch(createAccount(SignUpState));
+        if(apiResponse.payload.data.success){
+            navigate('/auth/login');
+        }
+        
 
     }
 
