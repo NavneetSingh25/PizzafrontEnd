@@ -5,6 +5,8 @@ import NotFound from "./pages/Auth/NotFound";
 import Signup from "./pages/Auth/SignUp";
 import Home from "./pages/Home"
 import { Route,Routes } from "react-router-dom";
+import ProductDetails from "./pages/Products/ProductDetails";
+import CartDetails from "./pages/Cart/CartDetails";
 
 function App() {
     return (
@@ -14,6 +16,8 @@ function App() {
             <Route path="/auth/signup" element={<Signup/>} />
             <Route path="/auth/login" element={<Login/>} />
             <Route path="/auth/logout" element={<Login/>} />
+            <Route path="/product/:productId" element={<ProductDetails/>} />
+            <Route path="/cart" element={<CartDetails/>} />
 
             <Route path="/admin/addproduct" element={<AddProduct/>} />
             <Route path="*" element={<NotFound/>} />
