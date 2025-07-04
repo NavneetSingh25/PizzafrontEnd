@@ -42,6 +42,8 @@ function ProductDetails() {
         description,
         price,
         category,
+        rating = 4,
+        reviews = 4,
         } = productDetails;
 
     return (
@@ -78,6 +80,14 @@ function ProductDetails() {
                 }
             </div>
             
+            <div className="flex items-center gap-2 text-yellow-500">
+            {[...Array(5)].map((_, i) => (
+                <span key={i}>
+                {i < rating ? "★" : "☆"}
+                </span>
+            ))}
+            <span className="text-gray-600 text-sm">({reviews} reviews)</span>
+            </div>
 
 
 

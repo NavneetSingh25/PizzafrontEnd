@@ -6,7 +6,7 @@ import Food from "../assets/Images/food.png"
 import pickup from "../assets/Images/pickup.png"
 import enjoy from "../assets/Images/enjoy.png"
 import Layout from'../Layouts/Layout'
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllProducts } from "../Redux/Slices/ProductSlice";
 import { Link } from "react-router-dom";
@@ -14,9 +14,14 @@ import { Link } from "react-router-dom";
 function Home(){
     const dispatch=useDispatch();
     const {productData}=useSelector((state)=>state.product);
+    
     useEffect(()=>{
         dispatch(getAllProducts());
     },[])
+    const topThreeProducts = productData
+    .filter(item => item.inStock)
+    .slice(0, 3);
+
     return(
         <Layout>
         <div>
@@ -135,7 +140,7 @@ function Home(){
                             </div>
                             <div className="flex-grow">
                                 <h2 className="mb-3 text-lg font-bold text-gray-900 title-font">
-                                  Enjoy Food  
+                                Enjoy Food  
                                 </h2>
                                 <p className="text-base leading-relaxed">
                                     As soon as you get your food,enjoy it with your loved ones.
@@ -185,37 +190,33 @@ function Home(){
         </div>
         </section>
 
-        <div className="mx-auto px-4 py-6">
+        <div className="mx-auto px-4 bg-gradient-to-r from-cyan-50 to-cyan-100 py-6">
         <div className="flex flex-wrap justify-center gap-6">
-            {productData.map((item) =>
-            item.inStock && (
-                <div key={item._id} className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
+            {topThreeProducts.map(item => (
+            <div key={item._id} className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
                 <Link to={`/product/${item._id}`}>
-                    <div className="overflow-hidden border rounded-lg shadow-sm hover:shadow-md transition">
+                <div className="overflow-hidden border rounded-lg shadow-sm hover:shadow-md transition">
                     <img
-                        src={item.productImage}
-                        alt={item.productName}
-                        className="object-cover w-full h-48 rounded-t-lg"
+                    src={item.productImage}
+                    alt={item.productName}
+                    className="object-cover w-full h-48 rounded-t-lg"
                     />
                     <div className="p-4 bg-white">
-                        <p className="text-sm text-orange-500 font-medium uppercase tracking-wider">
+                    <p className="text-sm text-orange-500 font-medium uppercase tracking-wider">
                         {item.category}
-                        </p>
-                        <h3 className="text-lg font-semibold text-gray-800 truncate">
+                    </p>
+                    <h3 className="text-lg font-semibold text-gray-800 truncate">
                         {item.productName}
-                        </h3>
-                        <p className="mb-4 text-base leading-relaxed ">
-                            {item.description}
-                        </p>
-                        <p className="text-lg font-medium text-gray-900 title-font ">
-                            ${item.price}
-                        </p>
+                    </h3>
+                    <p className="mb-4 text-sm text-gray-600">
+                        {item.description}
+                    </p>
+                    <p className="text-lg font-bold text-orange-600">${item.price}</p>
                     </div>
-                    </div>
-                </Link>
                 </div>
-            )
-            )}
+                </Link>
+            </div>
+            ))}
         </div>
         </div>
         
@@ -226,3 +227,4 @@ function Home(){
 }
 
 export default Home;
+

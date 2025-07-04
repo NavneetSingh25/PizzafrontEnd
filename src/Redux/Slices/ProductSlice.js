@@ -25,24 +25,24 @@ export const getAllProducts=createAsyncThunk('/products/getAll',async ()=>{
 })
 
         export const createProduct = createAsyncThunk('/product/createProduct', async (data) => {
-  try {
-    const response = axiosInstance.post('/product', data);
-    toast.promise(response, {
-      loading: 'Creating product...',
-      success: (res) => res?.data?.message || 'Product created!',
-      error: 'Product creation failed'
+    try {
+        const response = axiosInstance.post('/product', data);
+        toast.promise(response, {
+        loading: 'Creating product...',
+        success: (res) => res?.data?.message || 'Product created!',
+        error: 'Product creation failed'
+        });
+        const result = await response;
+        return {
+        success: result.data.success,
+        message: result.data.message,
+        data: result.data.data
+        };
+    } catch (error) {
+        toast.error('Something went wrong while creating the product');
+        throw error;
+    }
     });
-    const result = await response;
-    return {
-      success: result.data.success,
-      message: result.data.message,
-      data: result.data.data
-    };
-  } catch (error) {
-    toast.error('Something went wrong while creating the product');
-    throw error;
-  }
-});
 
 export const getProductDetails=createAsyncThunk('/products/getdetails',async (id)=>{
     try {

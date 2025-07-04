@@ -4,6 +4,8 @@ import Footer from '../Components/Footer';
 import { Link, useNavigate } from 'react-router-dom';
 import { logout } from '../Redux/Slices/AuthSlice';
 import Cart from '../assets/Images/Cart.svg'
+import { useEffect } from 'react';
+import { getCartDetails } from '../Redux/Slices/CartSlice';
 
 function Layout({children}){
     const isLoggedIn=useSelector((state)=>state.auth.isLoggedIn);
@@ -15,8 +17,21 @@ function Layout({children}){
         dispatch(logout());
     }
 
+    async function fetchCartDetails() {
+        const response=await dispatch(getCartDetails());
+        if(response?.payload?.isUnAuthorised){
+            dispatch(logout());
+        }
+    }
+
+    useEffect(()=>{
+        if(isLoggedIn){
+            fetchCartDetails();
+        }
+    },[])
+    
     return(
-        <div>
+        <div className='flex flex-col min-h-screen'>
             <nav className="flex items-center justify-around h-16 text-[#6B7280] font-mono border-none shadow-md">
                 <div onClick={()=>navigate('/')} className="flex items-center justify-center">
                     <p>Pizza App</p>
@@ -24,26 +39,19 @@ function Layout({children}){
                     
                 </div>
 
-                <div className='hidden md:block'>
-                    <ul className='gap-4 flex'>
-                        <li className='hover:text-[#FF9910]'>
-                            {' '}
-                            <p>Menu {' '}</p>
-                        </li>
-
-                        <li className='hover:text-[#FF9910]'>
-                            {' '}
-                            <p>Services {' '}</p>
-                        </li>
-
-                        <li className='hover:text-[#FF9910]'>
-                            {' '}
-                            <p>About  {' '}</p>
-                        </li>
-
-                    </ul>
+                <div className="hidden md:block">
+                <ul className="gap-6 flex">
+                    <li className="hover:text-[#FF9910]">
+                    <Link to="/menu">Menu</Link>
+                    </li>
+                    <li className="hover:text-[#FF9910]">
+                    <Link to="/services">Services</Link>
+                    </li>
+                    <li className="hover:text-[#FF9910]">
+                    <Link to="/about">About</Link>
+                    </li>
+                </ul>
                 </div>
-
                 <div>
                     <ul className='flex gap-4'>
                         <li className='hover:text-[#c57c2893]'>
@@ -69,8 +77,10 @@ function Layout({children}){
 
             </nav>
 
-
-            {children}
+            <main className='flex-grow'>
+                {children}
+            </main>
+            
 
 
             <Footer/>
