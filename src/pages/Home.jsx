@@ -1,6 +1,6 @@
 import { IconArrowrightShort } from "../Components/Icons/IconArrowRightShort";
 import Pizza3 from "../assets/Images/Pizza3.png"
-import image from "../assets/Images/cook.png"
+import image from "../assets/Images/Cook.png"
 import { IconPatchedChecked } from "../Components/Icons/IconPatchedCheck";
 import Food from "../assets/Images/food.png"
 import pickup from "../assets/Images/pickup.png"
