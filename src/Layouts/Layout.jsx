@@ -19,9 +19,6 @@ function Layout({children}){
 
     async function fetchCartDetails() {
         const response=await dispatch(getCartDetails());
-        if(response?.payload?.isUnAuthorised){
-            dispatch(logout());
-        }
     }
 
     useEffect(()=>{
