@@ -10,6 +10,7 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllProducts } from "../Redux/Slices/ProductSlice";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Home(){
     const dispatch=useDispatch();
@@ -31,8 +32,8 @@ function Home(){
                 className="flex flex-col-reverse items-center justify-center py-5 md:flex-row md:gap-7 bg-gradient-to-r from-amber-50 to-orange-300 ">
                     <div className="w-5/6 md:w-2/6 ml-4 text-center md:text-left space-y-4">
                         <div className="flex justify-center md:justify-start items-center text-4xl font-extrabold tracking-tight text-transparent bg-gradient-to-r from-orange-500 via-red-400 bg-clip-text">
-                            <h1 className="pb-5 font-bold text-transparent bg-gradient-to-r from-orange-500 to-orange-400 bg-clip-text">Enjoy the slice {' '} 😋 </h1>
-                            
+                            <h1 className="pb-5 font-bold text-transparent bg-gradient-to-r from-orange-500 to-orange-400 bg-clip-text">Enjoy the slice {' '}</h1>
+                            <span className="ml-2"> 😋 </span>
                         </div>
 
                         <p className="pb-4 text-[#4B5563] text-sm sm:text-base leading-relaxed">
