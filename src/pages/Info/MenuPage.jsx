@@ -27,7 +27,7 @@ import { Link } from "react-router-dom";
             <section className="py-10 px-6 bg-gradient-to-r from-orange-300 to-orange-400">
                 <div className="text-center mb-8">
                 <h1 className="text-4xl font-extrabold text-transparent bg-gradient-to-r from-orange-700 to-orange-500 bg-clip-text">
-                    Explore Our Flavors
+                    Explore Our Flavours
                 </h1>
                 <p className="mt-2 text-gray-600 text-lg max-w-xl mx-auto">
                     Discover handcrafted pizzas, refreshing drinks, and tasty sides — all curated by our expert chefs, freshly made and ready to order.
