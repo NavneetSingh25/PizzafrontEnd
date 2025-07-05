@@ -53,7 +53,6 @@ export const getCartDetails=createAsyncThunk('/carts/getcartdetails',async ()=>{
         });
         const apiResponse=await response;
         return apiResponse;
-
     } catch (error) {
         console.log(error);
         if(error?.response?.status===401){
