@@ -34,7 +34,7 @@ function Layout({children}){
         <div className='flex flex-col min-h-screen'>
             <nav className="flex items-center justify-around h-16 text-[#6B7280] font-mono border-none shadow-md">
                 <div onClick={()=>navigate('/')} className="flex items-center justify-center">
-                    <p>Pizza App</p>
+                    <p className='font-bold text-orange-600'>CRUSTIQUE{' '}</p>
                     <img src={logo} alt="logo" className='h-12 w-12 rounded-lg' />
                     
                 </div>
