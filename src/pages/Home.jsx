@@ -28,15 +28,15 @@ function Home(){
             {/*hero section*/}
             <section 
                 className="flex flex-col-reverse items-center justify-center py-5 md:flex-row md:gap-7 bg-gradient-to-r from-amber-50 to-orange-300 ">
-                    <div className="w-4/6 ml-4 text-center md:w-2/6 md:text-left">
-                        <div className="flex justify-center text-4xl md:justify-normal">
+                    <div className="w-5/6 md:w-2/6 ml-4 text-center md:text-left space-y-4">
+                        <div className="flex justify-center md:justify-start items-center text-4xl font-extrabold tracking-tight text-transparent bg-gradient-to-r from-orange-500 via-red-400 bg-clip-text">
                             <h1 className="pb-5 font-bold text-transparent bg-gradient-to-r from-orange-500 to-orange-400 bg-clip-text">Enjoy the slice {' '}</h1>
                             <h1>😋</h1>
                         </div>
 
-                        <p className="pb-4 text-[#687280]">
-                        The pizza app lets you order your favourite pizza from the comfort of your home.
-                        Enjoy the best pizza in town with just a few clicks.
+                        <p className="pb-4 text-[#4B5563] text-sm sm:text-base leading-relaxed">
+                        <span className="font-semibold text-[#FF860D]">Artisian-Crafted.Algorithm Approved</span>
+                        Every Pizza at <span className="font-bold text-orange-500">Crustique</span> is a blend of tradition and tech- hand-stretched dough,locally sourced ingredients and smart flavours designed to delight.
                         </p>
                         <button className=" flex items-center px-4 py-2 text-white bg-yellow-500 rounded-md hover:bg-yellow-600 group ">
                             Order now
