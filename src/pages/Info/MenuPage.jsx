@@ -24,9 +24,9 @@ import { Link } from "react-router-dom";
 
         return (
             <Layout>
-            <section className="py-10 px-6 bg-gradient-to-r from-orange-400 to-orange-300">
+            <section className="py-10 px-6 bg-gradient-to-r from-orange-300 to-orange-400">
                 <div className="text-center mb-8">
-                <h1 className="text-4xl font-extrabold text-transparent bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text">
+                <h1 className="text-4xl font-extrabold text-transparent bg-gradient-to-r from-orange-700 to-orange-500 bg-clip-text">
                     Explore Our Flavors
                 </h1>
                 <p className="mt-2 text-gray-600 text-lg max-w-xl mx-auto">
