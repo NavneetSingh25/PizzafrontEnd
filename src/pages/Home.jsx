@@ -1,5 +1,5 @@
 import { IconArrowrightShort } from "../Components/Icons/IconArrowRightShort";
-import Pizza3 from "../assets/Images/Pizza3.png"
+import Pizza3 from './pizza.png'
 import image from "../assets/Images/Cook.png"
 import { IconPatchedChecked } from "../Components/Icons/IconPatchedCheck";
 import Food from "../assets/Images/food.png"
@@ -52,32 +52,55 @@ function Home(){
 
                     </div>
 
-
+                    <div className="ml-20 relative">
                         <img
                         src={leaf}
-                        className="absolute top-[12%] left-[58%] w-8 h-auto animate-float blur-[0.3px] rotate-[5deg]"
+                        className="absolute top-[-40px] left-[40%] w-6 h-6 animate-leaf-shower opacity-60 blur-[0.3px] rotate-[15deg]"
                         alt="leaf"
                         />
-                    <div className="ml-20 relative">
+                        <img
+                        src={leaf}
+                        className="absolute top-[-60px] left-[55%] w-7 h-7 animate-leaf-shower opacity-40 blur-sm rotate-[25deg]"
+                        style={{ animationDelay: '1.5s' }}
+                        alt="leaf"
+                        />
+                        <img
+                        src={leaf}
+                        className="absolute top-[-50px] left-[70%] w-5 h-5 animate-leaf-shower opacity-50 blur-[0.2px] rotate-[-10deg]"
+                        style={{ animationDelay: '2.8s' }}
+                        alt="leaf"
+                        />
+                        <img
+                        src={leaf}
+                        className="absolute top-[-50px] left-[70%] w-5 h-5 animate-leaf-shower opacity-50 blur-[0.2px] rotate-[-10deg]"
+                        style={{ animationDelay: '2.8s' }}
+                        alt="leaf"
+                        />
                         <img 
                         src={Pizza3}
                         alt="PizzaImage"
                         className="w-72 h-72 object-cover rounded-full mx-auto "
                         />
                                 <div
-                                className="absolute top-0 left-[40%] w-8 h-20 animate-steam opacity-30"
+                                className="absolute top-0 left-[40%] w-12 h-20 animate-steam opacity-30"
                                 style={{ animationDelay: '0.2s' }}
                                 >
                                 <div className="w-full h-full bg-white rounded-full filter blur-md" />
                                 </div>
                             <div 
-                            className="absolute top-0 left-1/2 w-10 h-20 -translate-x-1/2 animate-steam opacity-40 delay-200"
+                            className="absolute top-0 left-1/2 w-12 h-20 -translate-x-1/2 animate-steam opacity-40 delay-200"
                             style={{ animationDelay: '0.4s' }}
                             >
                             <div className="w-full h-full bg-white rounded-full filter blur-md" />
                             </div>
                             <div 
-                            className="absolute top-0 left-[50%] w-9 h-20 animate-steam opacity-35 delay-400"
+                            className="absolute top-0 left-[50%] w-12 h-20 animate-steam opacity-35 delay-400"
+                            style={{ animationDelay: '0.5s' }}
+                            >
+                            <div className="w-full h-full bg-white rounded-full filter blur-md" />
+                            </div>
+                            <div 
+                            className="absolute top-0 left-[50%] w-12 h-20 animate-steam opacity-35 delay-400"
                             style={{ animationDelay: '0.5s' }}
                             >
                             <div className="w-full h-full bg-white rounded-full filter blur-md" />
