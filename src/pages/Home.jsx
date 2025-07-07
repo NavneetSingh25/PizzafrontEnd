@@ -5,9 +5,9 @@ import { IconPatchedChecked } from "../Components/Icons/IconPatchedCheck";
 import Food from "../assets/Images/food.png"
 import pickup from "../assets/Images/pickup.png"
 import enjoy from "../assets/Images/enjoy.png"
-import leaf1 from "../assets/Images/leaf1.png"
-import leaf2 from "../assets/Images/leaf2.png"
-import leaf3 from "../assets/Images/leaf3.png"
+import leaf from "../assets/Images/leaf.png"
+import leaf6 from "../assets/Images/leaf6.png"
+import leaf5 from "../assets/Images/leaf5.png"
 import Layout from'../Layouts/Layout'
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -56,25 +56,25 @@ function Home(){
 
                     <div className="ml-20 relative">
                         <img
-                        src={leaf1}
-                        className="absolute top-[-40px] left-[40%] w-6 h-6 animate-leaf-shower opacity-60 blur-[0.3px] rotate-[15deg] pointer-events-none"
+                        src={leaf5}
+                        className="absolute top-[-40px] left-[40%] w-10 h-10 animate-leaf-shower opacity-60 blur-[0.3px] rotate-[15deg] pointer-events-none"
                         alt="leaf"
                         />
                         <img
-                        src={leaf2}
-                        className="absolute top-[-60px] left-[55%] w-7 h-7 animate-leaf-shower opacity-40 blur-sm rotate-[25deg] pointer-events-none"
+                        src={leaf5}
+                        className="absolute bottom-[-60px] left-[55%] w-10 h-10 animate-leaf-shower opacity-40 blur-sm rotate-[25deg] pointer-events-none"
                         style={{ animationDelay: '1.5s' }}
                         alt="leaf"
                         />
                         <img
-                        src={leaf3}
-                        className="absolute top-[-50px] left-[70%] w-5 h-5 animate-leaf-shower opacity-50 blur-[0.2px] rotate-[-10deg] pointer-events-none"
+                        src={leaf}
+                        className="absolute top-[-50px] left-[70%] w-8 h-8 animate-leaf-shower opacity-50 blur-[0.2px] rotate-[-10deg] pointer-events-none"
                         style={{ animationDelay: '2.8s' }}
                         alt="leaf"
                         />
                         <img
-                        src={leaf2}
-                        className="absolute top-[-50px] left-[70%] w-5 h-5 animate-leaf-shower opacity-50 blur-[0.2px] rotate-[-10deg] pointer-events-none"
+                        src={leaf6}
+                        className="absolute top-[-50px] right-[70%] w-8 h-8 animate-leaf-shower opacity-50 blur-[0.2px] rotate-[-10deg] pointer-events-none"
                         style={{ animationDelay: '2.8s' }}
                         alt="leaf"
                         />
