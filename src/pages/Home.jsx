@@ -5,7 +5,7 @@ import { IconPatchedChecked } from "../Components/Icons/IconPatchedCheck";
 import Food from "../assets/Images/food.png"
 import pickup from "../assets/Images/pickup.png"
 import enjoy from "../assets/Images/enjoy.png"
-import basil from "../assets/Images/basil.png"
+import leaf from "../assets/Images/leaf.png"
 import Layout from'../Layouts/Layout'
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -31,16 +31,18 @@ function Home(){
             <section 
                 className="flex flex-col-reverse items-center justify-center py-5 md:flex-row md:gap-7 bg-gradient-to-r from-amber-50 to-orange-300 ">
                     <div className="w-4/6 ml-4 text-center md:w-2/6 md:text-left">
-                        <div className="flex justify-center text-4xl md:justify-normal">
-                            <h1 className="pb-5 font-bold text-transparent bg-gradient-to-r from-orange-500 to-orange-400 bg-clip-text opacity-0 translate-y-0 animate-fade-in">Enjoy the slice {' '}</h1>
-                            <h1>😋</h1>
+                        <div className="flex justify-center md:justify-normal items-center text-4xl font-extrabold tracking-tight">
+                        <h1 className="pb-5 text-transparent bg-gradient-to-r from-orange-500 to-orange-400 bg-clip-text">
+                            Enjoy the slice
+                        </h1>
+                        <span className="ml-2 text-black text-4xl animate-bounce">😋</span>
                         </div>
 
                         <p className="pb-4 text-[#4B5563] text-sm sm:text-base leading-relaxed">
                         <span className="font-semibold text-[#FF860D]">Artisian-Crafted.Algorithm Approved {' '} </span>
                         Every Pizza at <span className="font-bold text-orange-500">Crustique</span> is a blend of tradition and tech- hand-stretched dough,locally sourced ingredients and smart flavours designed to delight.
                         </p>
-                        <button onClick={()=>navigate('/menu')} className=" flex items-center px-4 py-2 text-white bg-yellow-500 rounded-md hover:bg-yellow-600 group hover:scale-10 transition-all shadow-md hover:shadow-lg ">
+                        <button onClick={()=>navigate('/menu')} className="flex items-center px-4 py-2 text-white bg-yellow-500 rounded-md hover:bg-yellow-600 hover:scale-105 transition-transform shadow-md hover:shadow-lg">
                             Order now
                             <span className="inline-block ml-3 transition-transform ease-in-out group-hover:translate-x-2">
                                 <IconArrowrightShort/>
@@ -51,20 +53,35 @@ function Home(){
                     </div>
 
 
-                    <img
-                    src={basil}
-                    className="absolute top-[10%] left-[55%] w-6 h-6 animate-float blur-[0.3px]"
-                    alt="basil"
-                    />
+                        <img
+                        src={leaf}
+                        className="absolute top-[12%] left-[58%] w-8 h-auto animate-float blur-[0.3px] rotate-[5deg]"
+                        alt="leaf"
+                        />
                     <div className="ml-20 relative">
                         <img 
                         src={Pizza3}
                         alt="PizzaImage"
                         className="w-72 h-72 object-cover rounded-full mx-auto "
                         />
-                        <div className="absolute top-0 left-1/2 w-10 h-20 -translate-x-1/2 animate-steam opacity-40">
-                            <div className="w-full h-full bg-white rounded-full filter blur-md opacity-40" />
-                        </div>
+                                <div
+                                className="absolute top-0 left-[40%] w-8 h-20 animate-steam opacity-30"
+                                style={{ animationDelay: '0.2s' }}
+                                >
+                                <div className="w-full h-full bg-white rounded-full filter blur-md" />
+                                </div>
+                            <div 
+                            className="absolute top-0 left-1/2 w-10 h-20 -translate-x-1/2 animate-steam opacity-40 delay-200"
+                            style={{ animationDelay: '0.4s' }}
+                            >
+                            <div className="w-full h-full bg-white rounded-full filter blur-md" />
+                            </div>
+                            <div 
+                            className="absolute top-0 left-[50%] w-9 h-20 animate-steam opacity-35 delay-400"
+                            style={{ animationDelay: '0.5s' }}
+                            >
+                            <div className="w-full h-full bg-white rounded-full filter blur-md" />
+                            </div>
                     </div>
             </section>
 
