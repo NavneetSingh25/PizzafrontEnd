@@ -11,7 +11,7 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllProducts } from "../Redux/Slices/ProductSlice";
 import { Link, useNavigate } from "react-router-dom";
-
+import './effects.css';
 function Home(){
     const dispatch=useDispatch();
     const navigate=useNavigate();
