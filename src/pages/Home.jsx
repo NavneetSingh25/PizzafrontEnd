@@ -57,24 +57,24 @@ function Home(){
                     <div className="ml-20 relative">
                         <img
                         src={leaf5}
-                        className="absolute top-[-40px] left-[40%] w-10 h-10 animate-leaf-shower opacity-60 blur-[0.3px] rotate-[15deg] pointer-events-none"
+                        className="absolute top-[-40px] left-[40%] w-10 h-10 rounded-md animate-leaf-shower opacity-60 blur-[0.3px] rotate-[15deg] pointer-events-none"
                         alt="leaf"
                         />
                         <img
                         src={leaf5}
-                        className="absolute bottom-[-60px] left-[55%] w-10 h-10 animate-leaf-shower opacity-40 blur-sm rotate-[25deg] pointer-events-none"
+                        className="absolute bottom-[-60px] left-[55%] w-10 h-10 animate-leaf-shower opacity-40 blur-sm rotate-[25deg] pointer-events-none rounded-md"
                         style={{ animationDelay: '1.5s' }}
                         alt="leaf"
                         />
                         <img
                         src={leaf}
-                        className="absolute top-[-50px] left-[70%] w-8 h-8 animate-leaf-shower opacity-50 blur-[0.2px] rotate-[-10deg] pointer-events-none"
+                        className="absolute top-[-50px] left-[70%] w-8 h-8 rounded-md animate-leaf-shower opacity-50 blur-[0.2px] rotate-[-10deg] pointer-events-none"
                         style={{ animationDelay: '2.8s' }}
                         alt="leaf"
                         />
                         <img
                         src={leaf6}
-                        className="absolute top-[-50px] right-[70%] w-8 h-8 animate-leaf-shower opacity-50 blur-[0.2px] rotate-[-10deg] pointer-events-none"
+                        className="absolute top-[-50px] right-[70%] w-8 h-8 rounded-md animate-leaf-shower opacity-50 blur-[0.2px] rotate-[-10deg] pointer-events-none"
                         style={{ animationDelay: '2.8s' }}
                         alt="leaf"
                         />
