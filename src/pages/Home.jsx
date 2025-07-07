@@ -1,11 +1,13 @@
 import { IconArrowrightShort } from "../Components/Icons/IconArrowRightShort";
-import image1 from './image1.png'
+import Pizza3 from '../assets/Images/Pizza3'
 import image from "../assets/Images/Cook.png"
 import { IconPatchedChecked } from "../Components/Icons/IconPatchedCheck";
 import Food from "../assets/Images/food.png"
 import pickup from "../assets/Images/pickup.png"
 import enjoy from "../assets/Images/enjoy.png"
-import leaf from "../assets/Images/leaf.png"
+import leaf1 from "../assets/Images/leaf1.png"
+import leaf2 from "../assets/Images/leaf2.png"
+import leaf3 from "../assets/Images/leaf3.png"
 import Layout from'../Layouts/Layout'
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -54,30 +56,30 @@ function Home(){
 
                     <div className="ml-20 relative">
                         <img
-                        src={leaf}
-                        className="absolute top-[-40px] left-[40%] w-6 h-6 animate-leaf-shower opacity-60 blur-[0.3px] rotate-[15deg]"
+                        src={leaf1}
+                        className="absolute top-[-40px] left-[40%] w-6 h-6 animate-leaf-shower opacity-60 blur-[0.3px] rotate-[15deg] pointer-events-none"
                         alt="leaf"
                         />
                         <img
-                        src={leaf}
-                        className="absolute top-[-60px] left-[55%] w-7 h-7 animate-leaf-shower opacity-40 blur-sm rotate-[25deg]"
+                        src={leaf2}
+                        className="absolute top-[-60px] left-[55%] w-7 h-7 animate-leaf-shower opacity-40 blur-sm rotate-[25deg] pointer-events-none"
                         style={{ animationDelay: '1.5s' }}
                         alt="leaf"
                         />
                         <img
-                        src={leaf}
-                        className="absolute top-[-50px] left-[70%] w-5 h-5 animate-leaf-shower opacity-50 blur-[0.2px] rotate-[-10deg]"
+                        src={leaf3}
+                        className="absolute top-[-50px] left-[70%] w-5 h-5 animate-leaf-shower opacity-50 blur-[0.2px] rotate-[-10deg] pointer-events-none"
                         style={{ animationDelay: '2.8s' }}
                         alt="leaf"
                         />
                         <img
-                        src={leaf}
-                        className="absolute top-[-50px] left-[70%] w-5 h-5 animate-leaf-shower opacity-50 blur-[0.2px] rotate-[-10deg]"
+                        src={leaf2}
+                        className="absolute top-[-50px] left-[70%] w-5 h-5 animate-leaf-shower opacity-50 blur-[0.2px] rotate-[-10deg] pointer-events-none"
                         style={{ animationDelay: '2.8s' }}
                         alt="leaf"
                         />
                         <img 
-                        src={image1}
+                        src={Pizza3}
                         alt="PizzaImage"
                         className="w-72 h-72 object-cover rounded-full mx-auto "
                         />
