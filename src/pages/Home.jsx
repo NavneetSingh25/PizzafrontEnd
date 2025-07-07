@@ -1,5 +1,5 @@
 import { IconArrowrightShort } from "../Components/Icons/IconArrowRightShort";
-import Pizza3 from './pizza.png'
+import Image from './image.png'
 import image from "../assets/Images/Cook.png"
 import { IconPatchedChecked } from "../Components/Icons/IconPatchedCheck";
 import Food from "../assets/Images/food.png"
@@ -77,7 +77,7 @@ function Home(){
                         alt="leaf"
                         />
                         <img 
-                        src={Pizza3}
+                        src={Image}
                         alt="PizzaImage"
                         className="w-72 h-72 object-cover rounded-full mx-auto "
                         />
